@@ -12,4 +12,4 @@ class Decoder:
 		to_be_printed = chr(int(int(will_be_decoded) / int(self.decfac)))
 		print(to_be_printed)
 		
-		BasicEncoding.Decoder.dec(self)
+		Decoder.dec(self)
