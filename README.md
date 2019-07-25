@@ -9,4 +9,7 @@ Both the encoders and decoders of all of the levels have different
 Make sure the inputs are the same on both the encoders and decoders
  for the correct results.
 
+This code has not been designed to return any information;
+it has been designed to be used in the python interpreter or an IDE.
+
 Any questions can go to the issues tab or on reddit at **u/JanDerion47**
