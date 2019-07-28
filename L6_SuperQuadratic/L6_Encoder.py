@@ -30,8 +30,10 @@ class Encoder:
 		for i in to_be_encoded:
 			character = int(ord(i))
 			
+			out = do_over(self.steps, i, a, b, c)
+			
 			a += self.add[0]
 			b += self.add[1]
 			c += self.add[2]
 			
-			print(part_b)
+			print(out)
