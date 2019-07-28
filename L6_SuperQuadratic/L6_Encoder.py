@@ -10,17 +10,13 @@ class Encoder:
 		a = self.a
 		b = self.b
 		c = self.c
-		s = self.steps
-		
-		def quad(x, a, b, c):
-			output = int((a * (x ** 2)) + (b * x) + c)
-			return output
 		
 		def do_over(steps, x, a, b, c):
 			memory = x
 			step = steps
 			if step >= 0:
-				memory = quad(memory, a, b, c)
+				memory *= 0
+				memory += int((a * (memory ** 2)) + (b * memory) + c)
 				step -= 1
 			elif step == 0:
 				return memory
