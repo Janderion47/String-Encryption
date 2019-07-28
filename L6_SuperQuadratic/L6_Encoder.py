@@ -24,9 +24,9 @@ class Encoder:
 		to_be_encoded = input("What do you wish to be encoded master?: ")
 		
 		for i in to_be_encoded:
-			character = int(ord(i))
+			k = int(ord(i))
 			
-			out = do_over(self.steps, i, a, b, c)
+			out = do_over(self.steps, k, a, b, c)
 			
 			a += self.add[0]
 			b += self.add[1]
