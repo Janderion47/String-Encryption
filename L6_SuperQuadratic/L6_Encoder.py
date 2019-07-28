@@ -20,7 +20,7 @@ class Encoder:
 			memory = x
 			step = steps
 			if step >= 0:
-				memory == quad(memory, a, b, c)
+				memory = quad(memory, a, b, c)
 				step -= 1
 			elif step == 0:
 				return memory
