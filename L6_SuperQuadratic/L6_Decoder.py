@@ -8,6 +8,8 @@ class Decoder:
 	
 	def dec(self):
 		import math as m
+		import time as t
+		
 		a = int(self.a)
 		b = int(self.b)
 		c = int(self.c)
@@ -16,16 +18,17 @@ class Decoder:
 		
 		to_be_decoded = list(numbers.split(" "))
 		
-		def do_over(steps, x, a, b, c):
+		def do_over(steps, x, do_a, do_b, do_c):
 			memory = x
 			step = 1
 			while step <= steps:
-				memory = int((-b + m.sqrt((b ** 2) - (4 * a * (c - memory)))) / (2 * a))
+				memory = int((-do_b + m.sqrt((do_b ** 2) - (4 * do_a * (do_c - memory)))) / (2 * do_a))
 				step += 1
 			
 			return memory
 		
 		export_list = []
+		start = t.time()
 		for num in to_be_decoded:
 			out = do_over(self.steps, int(num), a, b, c)
 			
@@ -36,3 +39,5 @@ class Decoder:
 			export_list.append(chr(out))
 		for letter in export_list:
 			print(letter, end = "")
+		end = t.time()
+		print("Total time:", end - start)
