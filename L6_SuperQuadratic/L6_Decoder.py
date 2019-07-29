@@ -40,4 +40,4 @@ class Decoder:
 		for letter in export_list:
 			print(letter, end = "")
 		end = t.time()
-		print("Total time:", end - start)
+		print("Total time:", end - start, "seconds")

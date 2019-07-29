@@ -36,4 +36,4 @@ class Encoder:
 			print("    " + str(out))
 		
 		end = t.time()
-		print("Total time:", end - start)
+		print("\n Total time:", end - start, "seconds")
