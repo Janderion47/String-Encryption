@@ -32,6 +32,8 @@ class Encoder:
 			a += self.add[0]
 			b += self.add[1]
 			c += self.add[2]
+			
+			print("    " + str(out))
 		
 		end = t.time()
 		print("Total time:", end - start)
