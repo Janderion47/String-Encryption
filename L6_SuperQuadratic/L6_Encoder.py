@@ -1,9 +1,9 @@
 class Encoder:
 	def __init__(self, a, b, c, steps = 5):
-		self.a = a[0] * a[1]
-		self.b = b[0] * b[1]
-		self.c = c[0] * c[1]
-		self.add = [a[2], b[2], c[2]]
+		self.a = a[0]
+		self.b = b[0]
+		self.c = c[0]
+		self.add = [a[1], b[1], c[1]]
 		self.steps = steps
 	
 	def enc(self):
